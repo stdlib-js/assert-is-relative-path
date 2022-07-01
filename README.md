@@ -30,32 +30,30 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-relative-path
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-isRelativePath = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.isRelativePath;
-})();
-</script>
+var isRelativePath = require( '@stdlib/assert-is-relative-path' );
 ```
 
 #### isRelativePath( value )
@@ -125,13 +123,8 @@ bool = isRelativePath.win32( 'C:\\foo\\..\\bar\\baz' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var isRelativePath = require( '@stdlib/assert-is-relative-path' );
 
 var bool = isRelativePath.posix( 'foo/' );
 // returns true
@@ -180,18 +173,73 @@ bool = isRelativePath.win32( 'C:/foo/bar/baz' );
 
 bool = isRelativePath.win32( '/foo/..' );
 // returns false
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use the module as a general utility, install the module globally
+
+```bash
+npm install -g @stdlib/assert-is-relative-path
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: is-relative-path [options] [<path>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --platform name       Platform: 'win32' or 'posix'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ is-relative-path ./foo/bar/baz --platform=posix
+true
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n './docs/repl.txt' | is-relative-path
+true
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -272,6 +320,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/assert-is-relative-path/tree/deno
 [umd-url]: https://github.com/stdlib-js/assert-is-relative-path/tree/umd
 [esm-url]: https://github.com/stdlib-js/assert-is-relative-path/tree/esm
+[branches-url]: https://github.com/stdlib-js/assert-is-relative-path/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-relative-path/main/LICENSE
 
@@ -279,7 +328,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-absolute-path]: https://github.com/stdlib-js/assert-is-absolute-path/tree/umd
+[@stdlib/assert/is-absolute-path]: https://github.com/stdlib-js/assert-is-absolute-path
 
 <!-- </related-links> -->
 
