@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isRelativePath from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@esm/index.mjs';
+import isRelativePath from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@v0.1.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { posix, win32 } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@esm/index.mjs';
+import { posix, win32 } from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@v0.1.1-esm/index.mjs';
 ```
 
 #### isRelativePath( value )
@@ -130,7 +130,7 @@ bool = isRelativePath.win32( 'C:\\foo\\..\\bar\\baz' );
 <body>
 <script type="module">
 
-import isRelativePath from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@esm/index.mjs';
+import isRelativePath from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-relative-path@v0.1.1-esm/index.mjs';
 
 var bool = isRelativePath.posix( 'foo/' );
 // returns true
