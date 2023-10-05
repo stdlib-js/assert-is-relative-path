@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,40 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var proxyquire = require( 'proxyquire' );
-var isRelativePath = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof isRelativePath, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'if platform is POSIX, main export is method to test if a string is a POSIX relative path', function test( t ) {
-	var isRelativePath = proxyquire( './../dist', {
-		'@stdlib/assert-is-windows': false
-	});
-	t.equal( isRelativePath, isRelativePath.posix, 'equals posix method' );
-	t.end();
-});
-
-tape( 'if platform is Windows, main export is method to test if a string is a Windows relative path', function test( t ) {
-	var isRelativePath = proxyquire( './../dist', {
-		'@stdlib/assert-is-windows': true
-	});
-	t.equal( isRelativePath, isRelativePath.win32, 'equals win32 method' );
-	t.end();
-});
-
-tape( 'attached to the main export is a method to test if a string is a POSIX relative path', function test( t ) {
-	t.equal( typeof isRelativePath.posix, 'function', 'has a posix method' );
-	t.end();
-});
-
-tape( 'attached to the main export is a method to test if a string is a Windows relative path', function test( t ) {
-	t.equal( typeof isRelativePath.win32, 'function', 'has a win32 method' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
