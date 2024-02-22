@@ -1,0 +1,4 @@
+// Copyright (c) 2024 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import s from"https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-only-property@v0.2.1-esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-windows@v0.2.1-esm/index.mjs";import{isPrimitive as e}from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-string@v0.2.1-esm/index.mjs";import{posix as i}from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-absolute-path@v0.2.0-esm/index.mjs";import{win32 as r}from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-absolute-path@esm/index.mjs";function n(s){return e(s)&&!i(s)}function d(s){return e(s)&&!r(s)}var m;s(m=t?d:n,"posix",n),s(m,"win32",d);var o=m;export{o as default,n as posix,d as win32};
+//# sourceMappingURL=index.mjs.map
